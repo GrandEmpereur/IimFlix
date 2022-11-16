@@ -1,9 +1,11 @@
 import * as dotenv from "dotenv";
-import Koa from "koa";
-import cors from "@koa/cors";
-import ejs from "ejs";
-import render from "koa-ejs";
 import path from "path";
+import ejs from "ejs";
+import express from "express";
+
+const router = express.Router();
+import { Router } from "express";
+import { createRoutes } from "./routes/index";
 
 dotenv.config({
     path: path.resolve(
@@ -20,26 +22,23 @@ async function main(): Promise<void> {
     console.log(`Listening on port http://localhost:${port}`)
 }
 
-async function createApp(): Promise<Koa> {
-    const app = new Koa()
-    app.use(cors())
+async function createApp(): Promise<express.Express> {
+    const app = express()
 
-    // render index.html
-    render(app, {
-        root: path.join(__dirname, "../public"),
-        layout: "index",
-        viewExt: "html",
-        cache: false,
-        debug: false,
-    })
+    app.set("views", path.join(__dirname, "views"))
+    app.set("view engine", "ejs")
+    app.engine("html", ejs.renderFile)
 
-    app.use(async (ctx) => {
-        await ctx.render("index", {
-            title: "Hello World",
-        })
-    })
+    app.use(express.static(path.join(__dirname, "public")))
+    app.use(express.json())
+    app.use(express.urlencoded({ extended: true }))
+
+
+    // routes
+    createRoutes(app)
+
+
 
     return app
 }
-
 main()
