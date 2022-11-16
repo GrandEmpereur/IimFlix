@@ -36,10 +36,6 @@ async function createApp(): Promise<Koa> {
         debug: false,
     })
 
-    // set up routes
-    app.use(pages.routes())
-    app.use(cdeb.routes())
-
     return app
 }
 
