@@ -5,11 +5,6 @@ import ejs from "ejs";
 import render from "koa-ejs";
 import path from "path";
 
-import pages from "./routes/pages"
-import cdeb from "./routes/cdeb"
-
-
-
 dotenv.config({
     path: path.resolve(
         process.cwd(),
