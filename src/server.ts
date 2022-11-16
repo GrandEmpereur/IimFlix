@@ -5,6 +5,11 @@ import ejs from "ejs";
 import render from "koa-ejs";
 import path from "path";
 
+import pages from "./routes/pages"
+import cdeb from "./routes/cdeb"
+
+
+
 dotenv.config({
     path: path.resolve(
         process.cwd(),
@@ -24,19 +29,21 @@ async function createApp(): Promise<Koa> {
     const app = new Koa()
     app.use(cors())
 
+    // get correct root path for vercel deployment
+    const root = path.resolve(__dirname, "..")
+
+    // set up ejs
     render(app, {
-        root: path.join(__dirname, "views"),
-        layout: "layout",
-        viewExt: "html",
+        root,
+        layout: false,
+        viewExt: "ejs",
         cache: false,
         debug: false,
     })
 
-    app.use(async (ctx, next) => {
-        await ctx.render("layout", {
-            title: "Hello World",
-        })
-    })
+    // set up routes
+    app.use(pages.routes())
+    app.use(cdeb.routes())
 
     return app
 }
