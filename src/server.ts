@@ -24,16 +24,19 @@ async function createApp(): Promise<Koa> {
     const app = new Koa()
     app.use(cors())
 
-    // get correct root path for vercel deployment
-    const root = path.resolve(__dirname, "..")
-
-    // set up ejs
+    // render index.html
     render(app, {
-        root,
-        layout: false,
-        viewExt: "ejs",
+        root: path.join(__dirname, "../public"),
+        layout: "index",
+        viewExt: "html",
         cache: false,
         debug: false,
+    })
+
+    app.use(async (ctx) => {
+        await ctx.render("index", {
+            title: "Hello World",
+        })
     })
 
     return app
