@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "./build/server.js",
-  "type": "commonjs",
   "scripts": {
     "develop": "cross-env NODE_ENV=development ts-node-dev --respawn --files ./src/server.ts",
     "build": "rimraf ./build && yarn tsc",
