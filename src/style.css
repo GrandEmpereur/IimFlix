@@ -1777,6 +1777,24 @@ footer .footer__copy {
   border-radius: 10px;
 }
 
+.search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+.search input {
+  width: 250px;
+  border-bottom: 1px solid;
+  padding-bottom: 5px;
+  border-color: var(--color-orange);
+}
+.search i {
+  color: var(--color-orange);
+  margin-left: 10px;
+}
+
 .arrow {
   width: 100%;
   display: flex;
@@ -1791,8 +1809,8 @@ footer .footer__copy {
   border: 1px solid;
   border-radius: 50%;
   padding: 5px;
-  border-color: var(--color-white);
-  color: var(--color-white);
+  border-color: var(--color-orange);
+  color: var(--color-orange);
   display: flex;
   justify-content: center;
   align-items: center;
