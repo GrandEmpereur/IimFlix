@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+@font-face {
+    font-family: 'Poppins';
+    src: url("../fonts/Poppins/Poppins-Bold.ttf") format("truetype"),
+            url("../fonts/Poppins/Poppins-Light.ttf") format("truetype"),
+            url("../fonts/Poppins/Poppins-Regular.ttf") format("truetype"),
+            url("../fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
+}
+
+:root {
+    /* typography */
+    --base-text-size: 0.875rem; /* 14px */
+    --base-text-line-height: 1.3125rem;
+
+    --text-xs: calc(var(--base-text-size) / var(--text-size-increment));
+    --text-s: var(--base-text-size);
+    --text-m: calc(var(--text-s) * var(--text-size-increment));
+    --text-l: calc(var(--text-m) * var(--text-size-increment));
+    --text-xl: calc(var(--text-l) * var(--text-size-increment));
+    --text-2xl: calc(var(--text-xl) * var(--text-size-increment));
+    --text-3xl: calc(var(--text-2xl) * var(--text-size-increment));
+    --text-4xl: calc(var(--text-3xl) * var(--text-size-increment));
+
+    --line-height-fixed-amount: 0.35rem;
+    --line-height-relative-amount: 1.1em;
+    --globalLineHeight: calc(var(--line-height-fixed-amount) + var(--line-height-relative-amount));
+
+    /* spacing */
+    --unit: 0.5rem;
+    --space-increment: 1.65;
+
+    --space-xs: calc(var(--unit) / var(--space-increment));
+    --space-s: var(--unit);
+    --space-m: calc(var(--space-s) * var(--space-increment));
+    --space-l: calc(var(--space-m) * var(--space-increment));
+    --space-xl: calc(var(--space-l) * var(--space-increment));
+    --space-2xl: calc(var(--space-xl) * var(--space-increment));
+    --space-3xl: calc(var(--space-2xl) * var(--space-increment));
+    --space-4xl: calc(var(--space-3xl) * var(--space-increment));
+
+    /* font */
+    --body-font-family: "Poppins", sans-serif;
+    --heading-font-family: "Poppins", serif;
+
+    --body-font-weight: 400;
+    --heading-font-weight: 900;
+
+    --font-body-scale: var(--text-s);
+    --font-heading-scale: var(--text-l);
+
+    /* colors */
+    --color-white: #fff;
+    --color-black: #000;
+    --color-orange: #EF7D00;
+    --color-brown: #1F1000;
+
+    /* buttons */
+    --button-border-radius: 10px;
+}
