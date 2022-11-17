@@ -18,16 +18,18 @@ In such case, we delete the style definition in base.css and the component is re
 // Global components used in all templates
 // ---------------------------------------------------------------------------------------------------------------------
 
-@import "common/header";
-@import "common/button";
-@import "common/footer";
+@import "common/header",
+        "common/button",
+        "common/footer";
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Sections parte of the theme
 // ---------------------------------------------------------------------------------------------------------------------
-@import "sections/hero";
-@import "sections/home-content";
-@import "sections/crea";
+@import "sections/hero",
+        "sections/home-content",
+        "sections/crea",
+        "sections/crea2",
+        "sections/CDEB";
 
 
 
