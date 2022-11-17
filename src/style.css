@@ -1751,8 +1751,8 @@ footer .footer__copy {
   gap: 3.5rem;
   align-items: center;
 }
-.axe .cards .card,
-.projet .cards .card {
+
+.axe .card {
   width: 305px;
   height: 200px;
   display: flex;
@@ -1764,8 +1764,7 @@ footer .footer__copy {
   border-color: var(--color-orange);
   position: relative;
 }
-.axe .cards .card::before,
-.projet .cards .card::before {
+.axe .card::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1775,6 +1774,14 @@ footer .footer__copy {
   background: var(--color-orange);
   opacity: 0.2;
   border-radius: 10px;
+}
+
+.projet .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 480px;
+  height: 265px;
 }
 
 .search {
