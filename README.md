@@ -39,6 +39,41 @@ Abstract:xxx
 
 ## Directory Hierarchy
 ```
+|—— index.html
+|—— public
+|    |—— images
+|        |—— banniere.svg
+|        |—— logo.svg
+|—— src
+|    |—— js
+|    |—— scss
+|        |—— common
+|            |—— button.scss
+|            |—— footer.scss
+|            |—— header.scss
+|        |—— common.scss
+|        |—— components
+|            |—— .gitkeep
+|            |—— navigation.scss
+|        |—— core
+|            |—— _index.scss
+|            |—— _mixins.scss
+|            |—— _placeholders.scss
+|            |—— _variables.scss
+|        |—— sections
+|            |—— event.scss
+|            |—— hero.scss
+|            |—— histoire.scss
+|            |—— _cart.scss
+|        |—— settings
+|            |—— .gitkeep
+|            |—— _images.scss
+|            |—— _index.scss
+|            |—— _reset.scss
+|            |—— _typography.scss
+|            |—— _utilities.scss
+|    |—— style.css
+|    |—— style.css.map
 ```
 ## Code Details
 ### Tested Platform

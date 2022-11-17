@@ -1,0 +1,73 @@
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Icons
+// ---------------------------------------------------------------------------------------------------------------------
+
+%icon {
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-position: center
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Layout
+// ---------------------------------------------------------------------------------------------------------------------
+
+%page-width {
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding-left: var(--grid-outside-gap-mobile);
+  padding-right: var(--grid-outside-gap-mobile);
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Button
+// ---------------------------------------------------------------------------------------------------------------------
+
+%button {
+  font-size: var(--text-s);
+  border-radius: var(--button-border-radius);
+  padding: 1rem 4.1875em 1.06em 4.1875em;
+  cursor: pointer;
+  display: inline-block;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  text-decoration: none;
+  border: none;
+  appearance: none;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  border: 1px solid transparent;
+  width: fit-content;
+}
+
+%button-primary {
+  min-width: 200px;
+  background: var(--color-raisin-black);
+  color: var(--color-white);
+  text-transform: uppercase;
+  transition: all .2s ease-in;
+
+  span {
+    text-transform: uppercase;
+    color: var(--color-white);
+  }
+
+  &:hover {
+    border: 1px solid transparent;
+    color: var(--color-raisin-black);
+    background: var(--color-white);
+    text-decoration: none;
+    transition: all .2s ease-in;
+
+    span {
+      text-decoration: none;
+      color: var(--color-raisin-black);
+    }
+  }
+}

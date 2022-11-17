@@ -1,0 +1,68 @@
+.axe,
+.projet {
+    width: 100%;
+    height: 100%;
+    padding-left: 130px;
+    margin-top: 4.5rem;
+
+    p{
+        margin-top: 1rem;
+    }
+
+    .slider{
+        margin-top: 2rem;
+    }
+
+    .cards{
+        display: flex;
+        gap: 3.5rem;
+        align-items: center;
+
+        .card{
+            width: 305px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border: 1px solid;
+            border-radius: 10px;
+            border-color: var(--color-orange);
+            position: relative;
+
+            &::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: var(--color-orange);
+                opacity: 0.2;
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+.arrow{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 4.5rem 0;
+
+    i{
+        width: 32px;
+        height: 32px;
+        border: 1px solid;
+        border-radius: 50%;
+        padding: 5px;
+        border-color: var(--color-white);
+        color: var(--color-white);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

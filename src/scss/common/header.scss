@@ -1,0 +1,54 @@
+@import "../core/index";
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Header layout
+// ---------------------------------------------------------------------------------------------------------------------
+
+
+// Navbar
+.navBar{
+    background-color: var(--color-black);
+    border-bottom: 1px solid var(--color-orange);
+    width: 100%;
+    height: 80px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 130px;
+    
+    .menuBurger{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+		cursor: pointer;
+
+        .line1, .line2, .line3{
+            background-color: var(--color-orange);
+        }
+
+        .line1 {
+            width: 25px;
+            height: 2px;
+        }
+
+        .line2 {
+            width: 30px;
+            height: 2px;
+        }
+
+        .line3 {
+            width: 22px;
+            height: 2px;
+        }
+    }
+
+	.socialMedia{
+		color: var(--color-orange);
+        display: flex;
+        gap: 20px;
+        cursor: pointer;
+        i {
+            font-size: 24px;
+        }
+	}
+}

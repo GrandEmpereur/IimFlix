@@ -1,0 +1,34 @@
+/*
+Important notice :
+Some styles below come from base.css, the original base file of Dawn.
+In such case, we delete the style definition in base.css and the component is restyled in common.scss or its imports.
+*/
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Core is a SCSS helpers and contains no CSS - meant to included in every styles files
+// ---------------------------------------------------------------------------------------------------------------------
+@import "./core";
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Global style used in all files and templates
+// ---------------------------------------------------------------------------------------------------------------------
+@import "./settings";
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Global components used in all templates
+// ---------------------------------------------------------------------------------------------------------------------
+
+@import "common/header";
+@import "common/button";
+@import "common/footer";
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Sections parte of the theme
+// ---------------------------------------------------------------------------------------------------------------------
+@import "sections/hero";
+@import "sections/home-content";
+@import "sections/crea";
+
+
+
+

@@ -1,0 +1,29 @@
+@import "../core/index";
+
+// ---------------------------------------------------------------------------------------------------------------------
+// crea layout
+// ---------------------------------------------------------------------------------------------------------------------
+
+.maison {
+    padding: 3.5rem 130px;
+
+    &-back, button{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-transform: uppercase;
+    }
+
+    .background-enter{
+        position: absolute;
+        top: 82%;
+        left: 56%;
+
+        &:hover{
+            img {
+                transform: scale(1.5);
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+}
