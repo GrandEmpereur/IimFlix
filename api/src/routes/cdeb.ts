@@ -1,5 +1,4 @@
 import Router from "koa-router"
-import { cdebModel } from "../models/cdebModel"
 import koaBody from "koa-body"
 
 const ROUTER_OPTIONS = {
@@ -17,8 +16,8 @@ export default new Router(ROUTER_OPTIONS)
 
     .post("/", koaBody(), async (ctx) => {
         const { code1, code2 } = ctx.request.body
-        const codeResponse = "Code"
-        const codeResponse2 = "Code2"
+        const codeResponse = "creations"
+        const codeResponse2 = "design"
 
         if (!code1 || !code2) {
             ctx.throw(400, "Missing code1 or code2")
@@ -32,6 +31,7 @@ export default new Router(ROUTER_OPTIONS)
             // return true
             ctx.body = {
                 success: true,
+                code: "CDEB Success",
             }
         }
     })

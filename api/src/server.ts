@@ -5,6 +5,8 @@ import { connect } from "mongoose";
 import path from "path";
 
 import cdeb from "./routes/cdeb";
+import cdi from "./routes/cdi";
+
 
 dotenv.config({
     path: path.resolve(
@@ -27,15 +29,16 @@ async function createApp(): Promise<Koa> {
     app.use(cors())
 
     // DOING: connect to mongodb
-
-    // app.use(async (ctx, next) => {
-    //     await connect(`${process.env.MONGODB_SERVER_URL}`)
-    //     return await next()
-    // })
+    app.use(async (ctx, next) => {
+        await connect(`${process.env.MONGODB_SERVER_URL}`)
+        console.log("Connected to MongoDB" + `${process.env.MONGODB_SERVER_URL}`)
+        return await next()
+    })
 
     // @todo routes
     /* app.use(index.routes()) */
     app.use(cdeb.routes())
+    app.use(cdi.routes())
 
     return app
 }

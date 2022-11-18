@@ -32,6 +32,7 @@ class Cdeb extends HTMLElement {
                     // if the api returns true, redirect to the dashboard
                     if (data) {
                         window.location.href = 'http://127.0.0.1:5500/index.html';
+                        alert('Bravo, vous avez trouver le bon code ! Vous avez désormais accès à la page d\'Création & Design');
                     }else{
                         alert('Invalid code')
                     }
