@@ -29,11 +29,11 @@ async function createApp(): Promise<Koa> {
     app.use(cors())
 
     // DOING: connect to mongodb
-    app.use(async (ctx, next) => {
-        await connect(`${process.env.MONGODB_SERVER_URL}`)
-        console.log("Connected to MongoDB" + `${process.env.MONGODB_SERVER_URL}`)
-        return await next()
-    })
+    // app.use(async (ctx, next) => {
+    //     await connect(`${process.env.MONGODB_SERVER_URL}`)
+    //     console.log("Connected to MongoDB" + `${process.env.MONGODB_SERVER_URL}`)
+    //     return await next()
+    // })
 
     // @todo routes
     /* app.use(index.routes()) */

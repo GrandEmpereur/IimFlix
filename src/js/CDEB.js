@@ -29,10 +29,12 @@ class Cdeb extends HTMLElement {
             })
                 .then(res => res.json())
                 .then(data => {
-                    // if the api returns true, redirect to the dashboard
                     if (data) {
-                        window.location.href = 'http://127.0.0.1:5500/index.html';
-                        alert('Bravo, vous avez trouver le bon code ! Vous avez désormais accès à la page d\'Création & Design');
+                        const token = data.token;
+                        if (token) {
+                            localStorage.setItem('token2', token);
+                            window.location.href = 'http://127.0.0.1:5500/index.html';
+                        }
                     }else{
                         alert('Invalid code')
                     }

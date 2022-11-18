@@ -31,7 +31,7 @@ export default new Router(ROUTER_OPTIONS)
             // return true
             ctx.body = {
                 success: true,
-                code: "CDEB Success",
+                token: "CDEB Success",
             }
         }
     })

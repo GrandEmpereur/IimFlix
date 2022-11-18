@@ -8,8 +8,7 @@
     "build": "rimraf ./api/src/build && yarn tsc",
     "start": "node --experimental-specifier-resolution=node ./api/src/build/server.js",
     "tsc": "tsc",
-    "postinstall": "yarn build",
-    "tunnel": "lt --port 4200 --subdomain tc-y2-clickandreserve"
+    "postinstall": "yarn build"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",

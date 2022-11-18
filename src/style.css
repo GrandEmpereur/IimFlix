@@ -1753,6 +1753,7 @@ footer .footer__copy {
   display: flex;
   gap: 3.5rem;
   align-items: center;
+  cursor: pointer;
 }
 
 .axe .card {
@@ -1767,15 +1768,15 @@ footer .footer__copy {
   border-color: var(--color-orange);
   position: relative;
 }
-.axe .card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--color-orange);
-  opacity: 0.2;
+.axe .card-lock {
+  width: 305px;
+  height: 200px;
+  opacity: 0.5;
+  background-color: var(--color-orange);
+  background-image: url(../../../assets/images/lock.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
   border-radius: 10px;
 }
 
@@ -1824,6 +1825,10 @@ footer .footer__copy {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.tips:hover, .tips2:hover {
+  cursor: pointer;
 }
 
 @font-face {
@@ -1903,21 +1908,74 @@ footer .footer__copy {
   width: 100%;
   height: 100%;
 }
+.Enigme-Crea .code {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 252px;
+}
+.Enigme-Crea .code .back {
+  padding-left: 130px;
+  margin-top: 56px;
+  margin-bottom: 18px;
+  width: 200px;
+}
+.Enigme-Crea .code .back a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.Enigme-Crea .code .back {
+  margin-top: 20px;
+}
+.Enigme-Crea .code .choix {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 2.5rem;
+  flex-direction: column;
+  gap: 30px;
+}
+.Enigme-Crea .code .choix form {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.Enigme-Crea .code .choix form input {
+  width: 180px;
+  height: 36px;
+  background-color: #000;
+  border: 1px solid;
+  border-color: var(--color-orange);
+  border-radius: 20px;
+  padding: 0 1rem;
+}
+.Enigme-Crea .code .choix form button {
+  width: 36px;
+  height: 36px;
+  border: 1px solid;
+  border-color: var(--color-orange);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .object-3d .Tableau-3d {
   position: absolute;
-  top: 15rem;
+  top: 20rem;
   left: 18rem;
   width: 10rem;
 }
 .object-3d .Mac-3d {
   position: absolute;
-  top: 29.2rem;
+  top: 37rem;
   left: 30rem;
 }
 .object-3d .Clap-3d {
   position: absolute;
-  top: 28rem;
+  top: 35.3rem;
   left: 65rem;
 }
 
@@ -1941,15 +1999,29 @@ footer .footer__copy {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: var(--color-orange);
   border-color: var(--color-orange);
   border: 1px solid;
   border-radius: 1rem;
 }
+.modal-body .web {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+.modal-body .web img {
+  width: 13rem;
+  height: auto;
+}
+.modal-body .art {
+  display: none;
+}
 .modal-header {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 1rem;
+}
+.modal-header h2 {
+  color: var(--color-orange);
 }
 .modal-footer {
   background-color: var(--color-orange);
@@ -1961,7 +2033,7 @@ footer .footer__copy {
   border-radius: 30px;
   color: var(--color-white);
   position: absolute;
-  top: 27rem;
+  top: 34.4rem;
   cursor: pointer;
 }
 

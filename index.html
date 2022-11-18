@@ -10,6 +10,14 @@
 </head>
 
 <body>
+
+
+    <!-- 
+        Bravos vous avez réussie a accédé a cette partie merveilleuse du site :D?
+        Pour trouver la premier partie du mot de passe il vous faudra trouver le prénom de la personne la plus populaire au sien de l'axe Coding digitale et innovation  :D
+        Et Pour trouver la seconde partie du mot de passe il faudra trouver la salle ou se trouve le plus de personne au sien de l'IIM :D
+    -->
+
     <w3-menu class="navBar">
         <div class="menuBurger">
             <div class="line1"></div>
@@ -36,38 +44,39 @@
         </div>
     </section>
 
-    <section class="search">
-        <input type="text" placeholder="Rechercher..."><i class="fas fa-search"></i>
-    </section>
+
+
+    <!-- 
+        Une fois le mot de passe trouvé faite vos recherche sur le site vous trouverez peut être votre bonheur :D
+    -->
+    <iim-cdi class="search">
+        <form action="http://localhost:4200/cdi" method="POST">
+            <input type="text" placeholder="Rechercher..." id="CDI-Code"><button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+    </iim-cdi>
 
     <section class="axe">
-        <h2>Axes</h2>
+        <h2 class="tips">Axes</h2>
         <p>Découvrez les cinqs axes métier que proposent l’IIM !</p>
 
         <div class="slider">
             <div class="cards">
-                <a href="./index.html">
-                    <div class="card u-relative">
-                        <img src="./assets/images/MaskCod.svg" alt="axe1" class="u-absolute u-behind">
-                        <h3>Coding digital & innovation</h3>
-                    </div>
-                </a>
+                <div class="card u-relative" id="CDI-Unlock">
+                    <img src="./assets/images/MaskCod.svg" alt="axe1" class="u-absolute u-behind">
+                    <h3>Coding digital & innovation</h3>
+                </div>
 
-                <a href="./cdeb.html">
-                    <div class="card u-relative">
-                        <img src="./assets/images/MaskCom.svg" alt="axe1" class="u-absolute u-behind">
-                        <h3>Communication digitale & e-business</h3>
-                    </div>
-                </a>
+                <div class="card card-lock u-relative" id="CDEB-Unlock">
+                    <img src="./assets/images/MaskCom.svg" alt="axe1" class="u-absolute u-behind">
+                    <h3>Communication digitale & e-business</h3>
+                </div>
 
-                <a href="./crea.html">
-                    <div class="card u-relative">
-                        <img src="./assets/images/MaskCrea.svg" alt="axe1" class="u-absolute u-behind">
-                        <h3>Création & Design</h3>
-                    </div>
-                </a>
+                <div class="card card-lock u-relative" id="CD-Unlock">
+                    <img src="./assets/images/MaskCrea.svg" alt="axe1" class="u-absolute u-behind">
+                    <h3>Création & Design</h3>
+                </div>
 
-                <div class="card u-relative">
+                <div class="card card-lock u-relative" id="3D-Unlock">
                     <img src="./assets/images/Mask3d.svg" alt="axe1" class="u-absolute u-behind">
                     <h3>Animation 3D</h3>
                 </div>
@@ -77,7 +86,7 @@
 
     <section class="projet">
         <h2>Projets Création & Design</h2>
-        <p>Vous n’avez pas encore trouvé les identifiants de connexion !</p>
+        <p>Vous n’avez pas encore trouvé les identifiants de connexion <span class="tips2">!</span></p>
 
         <div class="slider">
             <div class="cards">
@@ -117,7 +126,7 @@
         </div>
     </section>
 
-    <div class="arrow">
+    <div class="arrow tips-btn">
         <a href="#axe"><i class="fas fa-arrow-down"></i></a>
     </div>
 
@@ -151,5 +160,8 @@
     </footer>
 
     <script src="./src/js/menu.js"></script>
+    <script src="./src/js/tokenChecker.js"></script>
+    <script src="./src/js/CDI.js"></script>
+    <img src="Alexis Legrand" alt="">
 </body>
 </html>

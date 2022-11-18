@@ -17,6 +17,7 @@
         display: flex;
         gap: 3.5rem;
         align-items: center;
+        cursor: pointer;
     }
 }
 
@@ -32,18 +33,18 @@
         border-radius: 10px;
         border-color: var(--color-orange);
         position: relative;
+    }
 
-        &::before{
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--color-orange);
-            opacity: 0.2;
-            border-radius: 10px;
-        }
+    .card-lock{
+        width: 305px;
+        height: 200px;
+        opacity: 0.5;
+        background-color: var(--color-orange);
+        background-image: url(../../../assets/images/lock.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50%;
+        border-radius: 10px;
     }
 }
 
@@ -96,5 +97,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+}
+
+.tips, .tips2{
+    &:hover{
+        cursor: pointer;
     }
 }

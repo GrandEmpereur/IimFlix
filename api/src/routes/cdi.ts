@@ -16,14 +16,14 @@ export default new Router(ROUTER_OPTIONS)
 
     .post("/", koaBody(), async (ctx) => {
         // get information from the request body
-        const { code } = ctx.request.body
+        const { response } = ctx.request.body
         const codeResponse = "Alexis410"
 
-        if (code == codeResponse) {
+        if (response == codeResponse) {
             // return true
             ctx.body = {
                 success: true,
-                code: "CDI Success",
+                token: "CDI Success",
             }
         } else {
             ctx.throw(400, "Invalid code")
