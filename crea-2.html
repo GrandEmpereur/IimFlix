@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    
     <nav class="navBar">
         <div class="menuBurger">
             <div class="line1"></div>
@@ -25,17 +26,53 @@
             <img src="assets/images/navIcon.svg" alt="Logo in Nav Bar">
         </div>
     </nav>
+    
 
     <section class="Enigme-Crea">
-        <div class="background">
-            <img src="./assets/images/enigme1/Group.png" alt="">
-        </div>
+        <iim-crea>
+            <div class="background">
+                <img src="./assets/images/enigme1/Group.png" alt="">
+            </div>
+    
+            <w3-iframe class="object-3d">
+                <span  class="Tableau-3d">
+                    <img src="./assets/images/crea/PROPS_or_PNG 1.png" alt="">
+                </span>
+                <span  class="Mac-3d">
+                    <img src="./assets/images/crea/PROPS_or_PNG 2.png" alt="">
+                </span>
+                <span  class="Clap-3d">
+                    <img src="./assets/images/crea/PROPS_or_PNG 3.png" alt="">
+                </span>
+            </w3-iframe>
+        </iim-crea>
 
-        <w3-iframe class="object-3d">
-            <iframe src="https://my.spline.design/tableau-fca0bc3fd2af6b9764586874a03b1b43/" class="Tableau-3d"></iframe>
-            <iframe src="https://my.spline.design/untitled-c6859bfad74b9b405038eb4bd568ef21/" class="Mac-3d"></iframe>
-            <iframe src="https://my.spline.design/clap-62d883e08a8b0eebd5d05478b2d4580f/" class="Clap-3d"></iframe>
-        </w3-iframe>
+        <div class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Création Vidéo</h2>
+                    <p>Retrouvez le mot n°1</p>
+                </div>
+                <div class="modal-body">
+                    <div class="video">
+                        <video width="400" controls>
+                            <source src="./assets/video/Video-crea.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <div class="web">
+
+                    </div>
+
+                    <div class="art">
+
+                    </div>
+                </div>
+                <span class="modal-footer">
+                    j’ai touvé
+                </span>
+            </div>
+        </div>
     </section>
 
 
@@ -69,5 +106,6 @@
     </footer>
 
     <script src="./src/js/iframe.js"></script>
+    <script src="./src/js/Crea.js"></script>
 </body>
 </html>

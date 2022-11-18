@@ -27,16 +27,16 @@
     </nav>
 
     <section class="CDEB2">
-        <div class="choix">
-            <form action="./src/js/CDEB.js" method="Post">
-                <input type="text" placeholder="Mot 1">
-                <input type="text" placeholder="Mot 2">
+        <iim-cdeb class="choix">
+            <form action="http://localhost:4200/cdeb" method="post">
+                <input type="text" id="code1" placeholder="Mot 1" required>
+                <input type="text" id="code2" placeholder="Mot 2" required>
                 <button type="submit"><img src="./assets/images/cdeb/check.svg" alt="check"></button>
             </form>
-        </div>
+        </iim-cdeb>
 
         <div class="back">
-            <a href=""><img src="./assets/images/cdeb/icons.svg" alt="icon arrow"> RETOUR</a>
+            <a href="./cdeb.html"><img src="./assets/images/cdeb/icons.svg" alt="icon arrow"> RETOUR</a>
         </div>
 
         <div class="Tableau">
@@ -76,5 +76,7 @@
             <p>© 2022. IIMFLIX, Inc.</p>
         </div>
     </footer>
+
+    <script src="./src/js/CDEB.js"></script>
 </body>
 </html>
