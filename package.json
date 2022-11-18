@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "develop": "cross-env NODE_ENV=development ts-node-dev --respawn --files ./api/src/server.ts",
-    "build": "rimraf ./build && yarn tsc",
+    "build": "rimraf ./api/src/build && yarn tsc",
     "start": "node --experimental-specifier-resolution=node ./api/src/build/server.js",
     "tsc": "tsc",
     "postinstall": "yarn build",
