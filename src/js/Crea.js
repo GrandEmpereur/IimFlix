@@ -11,16 +11,18 @@ class Crea extends HTMLElement {
     form() {
         const url = "http://localhost:4200/crea";
         const form = document.querySelector('form');
-        const code1 = document.querySelector('#code1');
-        const code2 = document.querySelector('#code2');
-        const code3 = document.querySelector('#code3');
+        const input = document.querySelector('#code1');
+        const input2 = document.querySelector('#code2');
+        const input3 = document.querySelector('#code3');
 
         form.addEventListener('submit', (e) => {
             e.preventDefault();
-            const response1 = code1.value;
-            const response2 = code2.value;
-            const response3 = code3.value;
-            const data = { response1, response2, response3 };
+            const code1 = input.value;
+            const code2 = input2.value;
+            const code3 = input3.value
+            const data = { code1, code2, code3 };
+            
+            console.log(data)
 
             fetch(url, {
                 method: 'POST',
@@ -34,7 +36,7 @@ class Crea extends HTMLElement {
                     if (data) {
                         const token = data.token;
                         if (token) {
-                            localStorage.setItem('token', token);
+                            localStorage.setItem('token3', token);
                             window.location.href = 'http://127.0.0.1:5500/index.html';
                         }
                     }else{

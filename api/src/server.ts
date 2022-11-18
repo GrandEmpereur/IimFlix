@@ -6,6 +6,7 @@ import path from "path";
 
 import cdeb from "./routes/cdeb";
 import cdi from "./routes/cdi";
+import crea from "./routes/crea";
 
 
 dotenv.config({
@@ -39,6 +40,7 @@ async function createApp(): Promise<Koa> {
     /* app.use(index.routes()) */
     app.use(cdeb.routes())
     app.use(cdi.routes())
+    app.use(crea.routes())
 
 
     return app
